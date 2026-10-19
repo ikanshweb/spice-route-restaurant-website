@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Makes the site fit phone screens properly -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spice Route Café | Gurugram</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Top navigation bar -->
+    <header class="nav">
+        <div class="logo">Spice Route</div>
+        <nav>
+            <a href="#menu">Menu</a>
+            <a href="#about">About</a>
+            <a href="#book">Book</a>
+        </nav>
+    </header>
+
+    <!-- Big first section people see -->
+    <section class="hero">
+        <h1>Himachali & North Indian food,<br>made fresh every day</h1>
+        <p>Sector 29, Gurugram · Open 11am – 11pm</p>
+        <a href="#book" class="btn">Reserve a Table</a>
+    </section>
+
+    <!-- Menu: buttons filter the dishes, JS fills the grid -->
+    <section id="menu" class="section">
+        <h2>Our Menu</h2>
+        <div class="filters">
+            <button class="filter active" data-cat="all">All</button>
+            <button class="filter" data-cat="starters">Starters</button>
+            <button class="filter" data-cat="mains">Mains</button>
+            <button class="filter" data-cat="desserts">Desserts</button>
+        </div>
+        <div class="menu-grid" id="menuGrid"></div>
+    </section>
+
+    <section id="about" class="section about">
+        <h2>Our Story</h2>
+        <p>Started by a family from the hills, Spice Route brings recipes from
+            Himachal to the city — siddu, madra, and dham-style thalis, cooked
+            the way our grandmother taught us.</p>
+    </section>
+
+    <!-- Booking form: data gets saved by script.js -->
+    <section id="book" class="section">
+        <h2>Book a Table</h2>
+        <form id="bookingForm">
+            <input type="text" id="name" placeholder="Your name" required>
+            <input type="tel" id="phone" placeholder="Phone number" required>
+            <input type="date" id="date" required>
+            <select id="guests" required>
+                <option value="">Number of guests</option>
+                <option>1-2</option>
+                <option>3-4</option>
+                <option>5-8</option>
+                <option>8+</option>
+            </select>
+            <button type="submit" class="btn">Confirm Booking</button>
+        </form>
+        <p id="formMsg"></p>
+    </section>
+
+    <!-- Floating WhatsApp button (replace number with client's) -->
+    <a class="whatsapp" href="https://wa.me/919999999999" target="_blank">💬 WhatsApp</a>
+
+    <footer>© 2026 Spice Route Café · Website by Ikansh</footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
